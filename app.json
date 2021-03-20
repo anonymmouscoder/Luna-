@@ -1,43 +1,40 @@
 {
-  "name": "Luna Bot",
-  "description": "Telegram's luna Bot. Create your Fork now.",
-  "keywords": [
-    "lunna",
-  ],
-  "success_url": "https://telegram.dog/",
-  "website": "https://github.com/",
-  "repository": "https://github.com/",
-"env": {
-    "bot_token": {
-      "description": "Your bot token, as a string.",
-      "value": ""
+    "name": "Luna Bot",
+    "description": "A Telegram's Luna bot",
+    "keywords": [
+      "telegram",
+      "pyrogram",
+      "torrent",
+      "3",
+      "luna"
+    ],
+    "website": "https://github.com/mptelepro/LunaChatBot",
+    "repository": "https://github.com/mptelepro/LunaChatBot",
+    "env": {
+      "api_id": {
+        "description": "get this value from https://my.telegram.org",
+        "value": ""
+      },
+      "api_hash": {
+        "description": "get this value from https://my.telegram.org",
+        "value": ""
+      },
+      "bot_token": {
+        "description": "get this value from @BotFather",
+        "value": ""
+      },
+      "BOT_PASSWORD": {
+        "description": "enter pasword or leave it public",
+        "value": "",
+        "required" : false
+      }
     },
-    "api_id": {
-      "description": "Get this value from https://my.telegram.org",
-      "value": ""
-    },
-    "api_hash": {
-      "description": "Get this value from https://my.telegram.org",
-      "value": ""
-    },
-    "owner_id": {
-      "description": "1xxxxxxxx9",
-      "value": ""
-    },
-    "bot_id": {
-      "description": "18xxxxxx5",
-      "value": ""
-    }
-  },
-  "addons": [
-  ],
-  "buildpacks": [{
-    "url": "heroku/python"
-  }],
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "free"
+    "stack": "container",
+    "formation": {
+      "worker": {
+        "quantity": 1,
+        "size": "free"
+      }
     }
   }
-}
+  
