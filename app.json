@@ -1,8 +1,8 @@
 {
-   "name": "Luna Bot",
-   "description": "Telegram's luna Bot. Create your Fork now.",
-   "keywords": [
-   "lunna",
+  "name": "Luna Bot",
+  "description": "Telegram's luna Bot. Create your Fork now.",
+  "keywords": [
+    "lunna",
   ],
   "success_url": "https://telegram.dog/",
   "website": "https://github.com/",
