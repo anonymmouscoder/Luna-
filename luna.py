@@ -29,7 +29,6 @@ async def repo(_, message):
         "[Github](https://github.com/thehamkercat/LunaChatBot)"
         + " | [Group](t.me/PatheticProgrammers)", disable_web_page_preview=True)
 
-
 @luna.on_message(filters.command("help") & ~filters.edited)
 async def start(_, message):
     user_id = message.from_user.id
@@ -156,7 +155,6 @@ print(
 -----------------
 | Luna Started! |
 -----------------
-
 """
 )
 
