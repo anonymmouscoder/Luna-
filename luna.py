@@ -1,7 +1,7 @@
-import asyncio
+from asyncio import sleep, gather
 import re
-import aiohttp
-from config import bot_token, owner_id, bot_id, ARQ_API_BASE_URL as ARQ_API
+from aiohttp import ClientSession
+from config import ARQ_API_KEY, bot_token, ARQ_API_BASE_URL
 from pyrogram import Client, filters, idle
 from Python_ARQ import ARQ
 
@@ -11,17 +11,23 @@ luna = Client(
     api_id="6020175",
     api_hash="0fed0266f47e392e71811591be930e94",
 )
+bot_id = int(bot_token.split(":")[0])
+aiohttp_session = ClientSession()
+arq = ARQ(ARQ_API_BASE_URL, ARQ_API_KEY, aiohttp_session)
 
-blacklisted = []
-mode = None
+async def lunaQuery(query: str, user_id: int):
+    luna = await arq.luna(query, user_id)
+    return luna.result
 
-async def getresp(query):
-    url = f"https://lunabot.tech/?query={query}"
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as res:
-            res = await res.json()
-            text = res["response"]
-            return text
+async def type_and_send(message):
+    chat_id = message.chat.id
+    user_id = message.from_user.id if message.from_user else 0
+    query = message.text.strip()
+    await message._client.send_chat_action(chat_id, "typing")
+    response, _ = await gather(lunaQuery(query, user_id), sleep(2))
+    await message.reply_text(response)
+    await message._client.send_chat_action(chat_id, "cancel")
+
 
 @luna.on_message(filters.command("repo") & ~filters.edited)
 async def repo(_, message):
