@@ -1,7 +1,7 @@
 from asyncio import sleep, gather
 import re
 from aiohttp import ClientSession
-from config import ARQ_API_KEY, bot_token, ARQ_API_BASE_URL
+from config import ARQ_API_KEY, bot_token, ARQ_API_BASE_URL, owner_id
 from pyrogram import Client, filters, idle
 from Python_ARQ import ARQ
 
