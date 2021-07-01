@@ -2,7 +2,7 @@ import asyncio
 import re
 from aiohttp import ClientSession
 from config import bot_token, owner_id, bot_id, ARQ_API_BASE_URL as ARQ_API
-from pyrogram import Client, filters
+from pyrogram import Client, filters, idle
 from Python_ARQ import ARQ
 
 luna = Client(
