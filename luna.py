@@ -16,7 +16,7 @@ aiohttp_session = ClientSession()
 arq = ARQ(ARQ_API_BASE_URL, ARQ_API_KEY, aiohttp_session)
 
 async def lunaQuery(query: str, user_id: int):
-    luna = await arq.luna(query)
+    luna = await arq.luna(query, user_id)
     response = luna.response
     return response
 
