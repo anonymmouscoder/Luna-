@@ -26,7 +26,7 @@ Public Instance Of This Bot Can Be Found On Telegram As [@LunaChatBot](https://t
 [<img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" height="40"/>](https://heroku.com/deploy?template=https://github.com/likucs/chatbot "Heroku")
 
 
-##credit
+## credit
 
 1. Lunachatbot team
 2. Its me @iAmLiKu
