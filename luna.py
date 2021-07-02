@@ -13,7 +13,7 @@ luna = Client(
 )
 bot_id = int(bot_token.split(":")[0])
 aiohttp_session = ClientSession()
-arq = ARQ(ARQ_API_KEY, aiohttp_session)
+arq = ARQ(ARQ_API_BASE_URL, ARQ_API_KEY, aiohttp_session)
 
 async def lunaQuery(query: str, user_id: int):
     luna = await arq.luna(query, user_id)
