@@ -3,7 +3,7 @@ Just Another Telegram Ai Chat Bot Written In Python With Pyrogram.
 
 Public Instance Of This Bot Can Be Found On Telegram As [@LunaChatBot](https://t.me/LunaChatBot)
 
-<img src="https://hamker.me/z/rohegch_luna.jpg" width="200" align="right">
+<img src="https://telegra.ph/file/b84e6b4fdf7f73532117d.jpg" width="200" align="right">
 
 ## Requirements
 
